@@ -1,0 +1,11 @@
+@mixin  textos($font,$weight,$color,$line,$let){
+  font-size: $font;
+  font-weight: $weight;
+  color: $color;
+  line-height: $line;
+  letter-spacing: $let;
+}
+
+@function em($px){
+  @return ($px / 16px) * 1em;
+}

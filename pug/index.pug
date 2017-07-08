@@ -1,0 +1,72 @@
+//output:../index.html
+- var p1 = "Activación: sonora,silenciosa o por perifoneo en menos de (1) segundo,silenciosa o por perifoneo en menos de (1) segundo o por perifoneo en menos de (1) segundo"
+- var p2 = "Frentes de Seguridad Local son organizaciones de caracter comunitario, con el fin de crear toda una cultura de la seguridad ciudadana. La idea es integrar a los vecinos de un sector especifico por cuadras, sectores, conjuntos cerrados, edificios y localidades, con el objeto de contrarrestar y prevenir los problemas de seguridad que afectan al orden ciudadano, diseñando mecanismos especiales para combatirlos oportunamente"
+- var p_feature1 = "Nuestra central de Monitoreo le informara si su alarma tiene algun"
+- var p_feature2 = "Activarlo es tan facil como tomar una fotografia"
+- var p_feature3 = "Informe automaticamente a su CAI mas cercano"
+- var features = [{img:"img/feature1.png",p:p_feature1},{img:"img/feature2.png",p:p_feature2},{img:"img/feature3.png",p:p_feature3}]
+- var li = ["Activación por Boton Panico","Activación por Llamada","Activación por Aplicación / Datos o Wifi","Notificaciones inmediatas","Notificacion Automatica al CAI mas cercano","Sirena con luz de x caracteristica","Sirena con luz de x caracteristica"]
+- var li2 = ["Activación de 1 Segundo","Notificaciones de los frentes de seguridad al que pertenezca","Activa alarmas ya instaladas","Reportes de todos los eventos de su frente de seguridad"]
+
+mixin lis(text)
+  li.lis
+    a(href="#") #{text}
+    
+mixin Features(img,text)
+  .column.features
+    img(src=img)
+    p.center=text
+        
+include header.pug.jade
+    //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
+  body
+    include nav.pug.jade
+    .columns
+      //.cell
+        img(src="img/cellphone.png")
+        img(src="img/app-store.png")
+        img(src="img/google-play.png")
+      .column.txt-banner
+        h1 Alarma comunal y vecinal hogar.io
+        p #{p1} 
+        a.button.boton Mas Información
+      .column
+        img(src="img/banner.png")
+          
+    .columns
+      include article.pug.jade
+        
+    .columns
+      p #{p2}
+    
+    .columns
+      each val in features
+        +Features(val.img,val.p)
+    br
+      
+    .columns
+      .column
+        h2.title-alarm="Conozca mas sobre Nuestra Alarma y App"
+        .columns
+          .column
+            img(src="img/alarma.png")
+          .column
+            ul
+              each val in li
+                +lis(val)
+      .column
+        .columns
+          .column
+            img(src="img/cellphone.png")
+            .cell
+              img(src="img/app-store.png")
+              img(src="img/google-play.png")
+          .column
+            ul
+              each val in li2
+                +lis(val)
+    
+    include footer.pug.jade
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+    script(src="js/index.js")

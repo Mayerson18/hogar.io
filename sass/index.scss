@@ -1,0 +1,89 @@
+@import "vars";
+@import "mixins";
+@import "margenes";
+@import "vista1";
+//@import "contactenos";
+
+body{
+  font-family: 'Ek Mukta', sans-serif;
+}
+
+.nav2{
+  height: 100px;
+  background-color: $negro;
+  & > img{
+    margin-top: 1em;
+    margin-left: 5%;
+  }
+}
+
+.txt-banner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  vertical-align: center;
+  flex-direction: column;
+  & > h1{
+    @include textos(em(55px),300!important,#191919,1.02,.6px);
+  }
+  & > p{
+    @include textos(em(20px),300!important,#726d6d,1.4,.2px);
+  }
+}
+
+.boton{
+  background-color: $rojo-b;
+  color: $blanco!important;
+  border-radius: 7px;
+}
+
+.columns{
+  padding: 0px 5%;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.center{ text-align: center; }
+
+.art{
+  &>h2{
+    @include textos(em(18px)!important,bold!important,$gris,1.11,.2px);
+  }
+}
+.container-art-img{
+  background-color: #eeeeee;
+  width: 72px;
+  height: 72px;
+  border: solid $gris 1px;
+  border-radius: 100%;
+}
+
+.art-img{
+  position: relative;
+  top: 9px;
+}
+
+.features{
+  & > p{
+    @include textos(1.5em,bold,$negro-features,1.46,.3px);
+  }
+}
+
+.lis{
+  margin-bottom: 1em;
+  & >a{
+    @include textos(1em,bold,$negro-titles,initial,.1px);
+  }
+}
+
+.cell{
+  display: flex;
+
+}
+
+.title-alarm{
+  @include textos(em(47px),500,$negro-titles,1.26,.2px);
+}
