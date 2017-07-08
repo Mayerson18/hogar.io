@@ -1,12 +1,20 @@
 //output:../index.html
 - var p1 = "Activación: sonora,silenciosa o por perifoneo en menos de (1) segundo,silenciosa o por perifoneo en menos de (1) segundo o por perifoneo en menos de (1) segundo"
-- var p2 = "Frentes de Seguridad Local son organizaciones de caracter comunitario, con el fin de crear toda una cultura de la seguridad ciudadana. La idea es integrar a los vecinos de un sector especifico por cuadras, sectores, conjuntos cerrados, edificios y localidades, con el objeto de contrarrestar y prevenir los problemas de seguridad que afectan al orden ciudadano, diseñando mecanismos especiales para combatirlos oportunamente"
+- var p2 = " Local son organizaciones de caracter comunitario, con el fin de crear toda una cultura de la seguridad ciudadana. La idea es integrar a los vecinos de un sector especifico por cuadras, sectores, conjuntos cerrados, edificios y localidades, con el objeto de contrarrestar y prevenir los problemas de seguridad que afectan al orden ciudadano, diseñando mecanismos especiales para combatirlos oportunamente"
 - var p_feature1 = "Nuestra central de Monitoreo le informara si su alarma tiene algun"
 - var p_feature2 = "Activarlo es tan facil como tomar una fotografia"
 - var p_feature3 = "Informe automaticamente a su CAI mas cercano"
+- var h4 = "Podra activar este texto todavia falta para enganche"
 - var features = [{img:"img/feature1.png",p:p_feature1},{img:"img/feature2.png",p:p_feature2},{img:"img/feature3.png",p:p_feature3}]
 - var li = ["Activación por Boton Panico","Activación por Llamada","Activación por Aplicación / Datos o Wifi","Notificaciones inmediatas","Notificacion Automatica al CAI mas cercano","Sirena con luz de x caracteristica","Sirena con luz de x caracteristica"]
 - var li2 = ["Activación de 1 Segundo","Notificaciones de los frentes de seguridad al que pertenezca","Activa alarmas ya instaladas","Reportes de todos los eventos de su frente de seguridad"]
+- var p_card1 = ["Maximo 10 Usuarios  por Frente","Notificaciones Ilimitadas del frente de seguridad"]
+- var p_card2 = ["Notificaciones Ilimitadas del frente de seguridad","Notificacion automatica al CAI mas cercado","Cantidad ilimitada de Miembros por frente","Podra Activar su alarma, ya instalda "]
+- var p_card3 = ["20 Usuarios Gratis por un Año","Notificaciones Ilimitadas del frente de seguridad","Notificacion automatica al CAI mas cercado","Cantidad ilimitada de Miembros por frente","Podra Activar alarmas ya instaladas"]
+
+mixin Cards(p)
+  each val in p
+    p.p5em #{val}
 
 mixin lis(text)
   li.lis
@@ -19,7 +27,10 @@ mixin Features(img,text)
         
 include header.pug.jade
     //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
+    link(rel="stylesheet" href="devices/devices.min.css")
   body
+    
+    //include device.pug.jade
     include nav.pug.jade
     .columns
       //.cell
@@ -33,13 +44,12 @@ include header.pug.jade
       .column
         img(src="img/banner.png")
           
-    .columns
+    .columns.gris
       include article.pug.jade
-        
-    .columns
-      p #{p2}
-    
-    .columns
+    .columns.gris
+      p #[strong Frentes de Seguridad] #{p2}
+
+    .columns.gris
       each val in features
         +Features(val.img,val.p)
     br
@@ -55,16 +65,50 @@ include header.pug.jade
               each val in li
                 +lis(val)
       .column
+        //img(src="img/logo.png")
         .columns
           .column
             img(src="img/cellphone.png")
             .cell
-              img(src="img/app-store.png")
-              img(src="img/google-play.png")
+                img.app(src="img/app-store.png")
+                img.play(src="img/google-play.png")
           .column
             ul
               each val in li2
                 +lis(val)
+    .gris.center
+      p.h4.p1em #{h4}
+    .columns.gris.p1em.center
+      .column
+        .card
+          .card-header.flex-center Frente Gratis
+          .card-content
+            +Cards(p_card1)
+      .column
+        .card
+          .card-header.flex-center Plan Integración
+          .card-content
+            +Cards(p_card2)
+          .card-footer.flex-spb 
+            .left 
+              .precio Precio por Usuario 
+            .right 
+              .costo 2500$ 
+              .mes Mensual
+      .column
+        .card
+          .card-header.flex-center Alarma Hogar.io
+          .card-content 
+            +Cards(p_card3)
+          .card-prefooter
+            img(src="img/logo.png")
+          .card-footer.flex-spb
+            .left 
+              .precio Precio por Usuario 
+              .anio Adicional o despues del año
+            .right 
+              .costo 2000$ 
+              .mes Mensual
     
     include footer.pug.jade
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")

@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css">
     <link rel="stylesheet" href="sass/index.min.css">
     <!--link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")-->
+    <link rel="stylesheet" href="devices/devices.min.css">
   </head>
 </html>
 <body>
+  <!--include device.pug.jade-->
   <nav class="nav2"><img src="img/logo.png"></nav>
   <div class="columns">
     <!--.cell
@@ -25,7 +27,7 @@
     </div>
     <div class="column"><img src="img/banner.png"></div>
   </div>
-  <div class="columns">
+  <div class="columns gris">
         <div class="column art center">
           <div class="flex-center">
             <div class="container-art-img"><img src="img/group.png" class="art-img"></div>
@@ -57,10 +59,10 @@
           <h2>Diferentes tipos de alarmas</h2>
         </div>
   </div>
-  <div class="columns">
-    <p>Frentes de Seguridad Local son organizaciones de caracter comunitario, con el fin de crear toda una cultura de la seguridad ciudadana. La idea es integrar a los vecinos de un sector especifico por cuadras, sectores, conjuntos cerrados, edificios y localidades, con el objeto de contrarrestar y prevenir los problemas de seguridad que afectan al orden ciudadano, diseñando mecanismos especiales para combatirlos oportunamente</p>
+  <div class="columns gris">
+    <p><strong>Frentes de Seguridad</strong>  Local son organizaciones de caracter comunitario, con el fin de crear toda una cultura de la seguridad ciudadana. La idea es integrar a los vecinos de un sector especifico por cuadras, sectores, conjuntos cerrados, edificios y localidades, con el objeto de contrarrestar y prevenir los problemas de seguridad que afectan al orden ciudadano, diseñando mecanismos especiales para combatirlos oportunamente</p>
   </div>
-  <div class="columns">
+  <div class="columns gris">
     <div class="column features"><img src="img/feature1.png"/>
       <p class="center">Nuestra central de Monitoreo le informara si su alarma tiene algun</p>
     </div>
@@ -90,9 +92,10 @@
       </div>
     </div>
     <div class="column">
+      <!--img(src="img/logo.png")-->
       <div class="columns">
         <div class="column"><img src="img/cellphone.png">
-          <div class="cell"><img src="img/app-store.png"><img src="img/google-play.png"></div>
+          <div class="cell"><img src="img/app-store.png" class="app"><img src="img/google-play.png" class="play"></div>
         </div>
         <div class="column">
           <ul>
@@ -101,6 +104,63 @@
             <li class="lis"><a href="#">Activa alarmas ya instaladas</a></li>
             <li class="lis"><a href="#">Reportes de todos los eventos de su frente de seguridad</a></li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gris center">
+    <p class="h4 p1em">Podra activar este texto todavia falta para enganche</p>
+  </div>
+  <div class="columns gris p1em center">
+    <div class="column">
+      <div class="card">
+        <div class="card-header flex-center">Frente Gratis</div>
+        <div class="card-content">
+          <p class="p5em">Maximo 10 Usuarios  por Frente</p>
+          <p class="p5em">Notificaciones Ilimitadas del frente de seguridad</p>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-header flex-center">Plan Integración</div>
+        <div class="card-content">
+          <p class="p5em">Notificaciones Ilimitadas del frente de seguridad</p>
+          <p class="p5em">Notificacion automatica al CAI mas cercado</p>
+          <p class="p5em">Cantidad ilimitada de Miembros por frente</p>
+          <p class="p5em">Podra Activar su alarma, ya instalda </p>
+        </div>
+        <div class="card-footer flex-spb"> 
+          <div class="left"> 
+            <div class="precio">Precio por Usuario </div>
+          </div>
+          <div class="right"> 
+            <div class="costo">2500$ </div>
+            <div class="mes">Mensual</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="card">
+        <div class="card-header flex-center">Alarma Hogar.io</div>
+        <div class="card-content"> 
+          <p class="p5em">20 Usuarios Gratis por un Año</p>
+          <p class="p5em">Notificaciones Ilimitadas del frente de seguridad</p>
+          <p class="p5em">Notificacion automatica al CAI mas cercado</p>
+          <p class="p5em">Cantidad ilimitada de Miembros por frente</p>
+          <p class="p5em">Podra Activar alarmas ya instaladas</p>
+        </div>
+        <div class="card-prefooter"><img src="img/logo.png"></div>
+        <div class="card-footer flex-spb">
+          <div class="left"> 
+            <div class="precio">Precio por Usuario </div>
+            <div class="anio">Adicional o despues del año</div>
+          </div>
+          <div class="right"> 
+            <div class="costo">2000$ </div>
+            <div class="mes">Mensual</div>
+          </div>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@
 @import "mixins";
 @import "margenes";
 @import "vista1";
+@import "device";
 //@import "contactenos";
 
 body{
@@ -46,7 +47,12 @@ body{
   justify-content: center;
 }
 
-.center{ text-align: center; }
+.flex-spb{
+  display: flex;
+  justify-content: space-between;
+}
+
+.center{ text-align: center; justify-content: center;}
 
 .art{
   &>h2{
@@ -54,7 +60,6 @@ body{
   }
 }
 .container-art-img{
-  background-color: #eeeeee;
   width: 72px;
   height: 72px;
   border: solid $gris 1px;
@@ -81,9 +86,63 @@ body{
 
 .cell{
   display: flex;
-
+  &> .play{
+    height: 74px;
+    width: 218px;
+    position: relative;
+    top: 73px;
+  }
+  &> .app{
+    height: 155px;
+    width: 218px;
+  }
 }
 
 .title-alarm{
   @include textos(em(47px),500,$negro-titles,1.26,.2px);
+}
+
+.gris{
+  background-color: #eeeeee;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.h4{
+  @include textos(em(50px),500,$negro-titles,1.18,.2px);
+  text-align: center;
+}
+
+.card{
+  & >.card-header{
+    @include textos(em(25.2px),bold,$blanco,initial,.3px);
+    background-color: $rojo;
+  }
+  & >.card-content{
+    @include textos(em(21.6px),100,#464141,initial,.3px);
+  }
+  & >.card-prefooter{
+    background-color: $negro;
+  }
+  & >.card-footer{
+    @include textos(em(18px),300,#464141,initial,.2px);
+    background-color: #d8d8d8;
+    padding: .5em;
+    .left{
+      text-align: left;
+    }
+  }
+}
+
+.costo{
+  @include textos(em(36px),300,#464141,initial,.2px);
+}
+
+@media (max-width:700px) {
+  .cell{
+    flex-wrap: wrap;
+    &> .play{
+      top: 0px;
+    }
+  }
 }
