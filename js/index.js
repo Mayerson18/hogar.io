@@ -7,3 +7,12 @@ $(".nav-toggle").click(function() {
     $(".nav-menu").children().addClass("r");
   }
 });
+
+var someBeforeOrAfterFunction = function(e, animationContext){
+
+	//The event that triggers the animation
+	console.log(e);
+
+	//The Animation Context Instance
+	console.log(animationContext);
+}

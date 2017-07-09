@@ -6,7 +6,7 @@
 - var articles = [art1,art2,art3,art4,art5]
   
 mixin article(img,title)
-  .column.art.center
+  .column.art.center(data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal")
     .flex-center
       .container-art-img
         img.art-img(src=img)

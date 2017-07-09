@@ -14,20 +14,21 @@
 
 mixin Cards(p)
   each val in p
-    p.p5em #{val}
+    p.p5em(data-anijs="if: mouseover,do: hinge animated,to: .costo ,after: removeAnim") #{val}
 
-mixin lis(text)
-  li.lis
-    a(href="#") #{text}
+mixin lis(text,className,ani,to)
+  li.lis(class="#{className}" data-anijs="if: mouseover, do: #{ani} animated,to: #{to}")
+    a(href="#" ) #{text}
     
 mixin Features(img,text)
   .column.features
-    img(src=img)
+    img(src=img data-anijs="if: scroll, on: window, do: bounce animated, before: $scrollReveal repeat")
     p.center=text
         
 include header.pug.jade
     //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
     link(rel="stylesheet" href="devices/devices.min.css")
+    link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
   body
     
     //include device.pug.jade
@@ -38,16 +39,16 @@ include header.pug.jade
         img(src="img/app-store.png")
         img(src="img/google-play.png")
       .column.txt-banner
-        h1 Alarma comunal y vecinal hogar.io
-        p #{p1} 
-        a.button.boton Mas Información
+        h1(data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: $scrollReveal repeat") Alarma comunal y vecinal hogar.io
+        p.bounceInLeft.animated() #{p1} 
+        a.bounceInLeft.animated.button.boton Mas Información
       .column
-        img(src="img/banner.png")
+        img(src="img/banner.png" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat")
           
     .columns.gris
       include article.pug.jade
     .columns.gris
-      p #[strong Frentes de Seguridad] #{p2}
+      p(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") #[strong Frentes de Seguridad] #{p2}
 
     .columns.gris
       each val in features
@@ -59,33 +60,33 @@ include header.pug.jade
         h2.title-alarm="Conozca mas sobre Nuestra Alarma y App"
         .columns
           .column
-            img(src="img/alarma.png")
+            img.swin(src="img/alarma.png")
           .column
             ul
               each val in li
-                +lis(val)
+                +lis(val,"li1","swing",".swin")
       .column
         //img(src="img/logo.png")
         .columns
           .column
-            img(src="img/cellphone.png")
+            img.telephone(src="img/cellphone.png")
             .cell
                 img.app(src="img/app-store.png")
                 img.play(src="img/google-play.png")
           .column
             ul
               each val in li2
-                +lis(val)
+                +lis(val,"li2","rubberBand",".telephone")
     .gris.center
-      p.h4.p1em #{h4}
+      p.h4.p1em(data-anijs="if: scroll, on: window, do: tada animated, before: $scrollReveal repeat") #{h4}
     .columns.gris.p1em.center
       .column
-        .card
+        .card(data-anijs="if: scroll, on: window, do: flipInY animated, before: $scrollReveal repeat")
           .card-header.flex-center Frente Gratis
           .card-content
             +Cards(p_card1)
       .column
-        .card
+        .card(data-anijs="if: scroll, on: window, do: flipInY animated, before: $scrollReveal repeat")
           .card-header.flex-center Plan Integración
           .card-content
             +Cards(p_card2)
@@ -96,7 +97,7 @@ include header.pug.jade
               .costo 2500$ 
               .mes Mensual
       .column
-        .card
+        .card(data-anijs="if: scroll, on: window, do: flipInY animated, before: $scrollReveal repeat")
           .card-header.flex-center Alarma Hogar.io
           .card-content 
             +Cards(p_card3)
@@ -113,4 +114,6 @@ include header.pug.jade
     include footer.pug.jade
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js")
+    script(src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js")
     script(src="js/index.js")
