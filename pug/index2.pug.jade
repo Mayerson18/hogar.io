@@ -21,10 +21,10 @@ include header.pug.jade
     
     include box.pug.jade
     
-    .flex-center.mb.center
+    .flex-center.mb.center(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
       h3.solicita Solicita más Información #[strong.red 32523892]
     
-    .columns.esconder.caracteristicas
+    .columns.esconder.caracteristicas(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
       .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica1.png")
         .caracteristica-foot.center FACIL DE USAR
@@ -37,10 +37,10 @@ include header.pug.jade
         
     .columns.adquiera.pad10.m0
       .column.is-7
-        .adquiera-title Adquiera nuestra Alarma  
-        .adquiera-subtitle saquele el mayor provecho a nuesta App
-        p.adquiera-text.mb Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR. Keytar pickled next level keffiyeh drinking vinegar street art. Art
-        .columns.is-fluid
+        .adquiera-title.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Adquiera nuestra Alarma  
+        .adquiera-subtitle.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") saquele el mayor provecho a nuesta App
+        p.adquiera-text.mb.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR. Keytar pickled next level keffiyeh drinking vinegar street art. Art
+        .columns.is-fluid.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
           .column.is-4
             .flex
               img.img-adquiera(src="img/index2/adquiera/llamada.png" style="height:51px;")
@@ -59,7 +59,7 @@ include header.pug.jade
         .adquiera-title ¿Ya tienes una Alarma?
         p.contacto Si ya tienes una Alarma No te preocupes #[strong.red Contactanos] y la haremos funcionar con nuestra app  
       .column.is-1
-      .column.center
+      .column.center.celular(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
         img.mano2(src="img/index2/motorola-moto-g.png")
         .descarga2 Descarga Gratis la Aplicacion
         

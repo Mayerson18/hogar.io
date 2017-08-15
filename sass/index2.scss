@@ -24,6 +24,14 @@ body{
   justify-content: center;
 }
 
+.fadeInUp{
+  -webkit-animation-delay: .7s;
+}
+
+.x{
+  -webkit-animation-delay: 2s;
+}
+
 .flex-end{
   @extend .flex;
   justify-content: flex-end;
@@ -80,7 +88,7 @@ body{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
+  //background-attachment: fixed;
   color: $blanco;
   padding-top: 5%;
 }
@@ -111,7 +119,6 @@ body{
 
 .mano{
   max-height: 100%;
-  background-attachment: fixed;
 }
 
 .box-not{
@@ -166,6 +173,7 @@ body{
 .adquiera{
   background-color: #f0f0f0;
   padding-bottom: 5em;
+  padding-top: 5em;
 }
 
 .adquiera-title{

@@ -6,7 +6,7 @@
 
 mixin Box(url,title,text)
   .column.pad0
-    .box-not
+    .box-not(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
       .flex
         img(src="#{url}")
         h2.title-box #{title}
