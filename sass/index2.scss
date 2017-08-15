@@ -104,20 +104,27 @@ body{
 
 .box-not{
   padding: 2em;
-  background-color: #d8d8d8;
+  background-color: #f0f0f0 !important;
   border: solid 1px #cccccc;
   &>.title-box{
     color: #0e0e0e;
     font-size: 1.5em;
+    font-weight: bold;
+  }
+  &>.text-box {
+    font-size: .9em;
+    font-weight:normal;
   }
 }
 
 .solicita{
-  font-size: em(48px);
+  font-size: em(40px);
   font-weight: 300;
   color: $negro;
   border-bottom: solid 3px #f10909;
   width: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .red{
@@ -139,7 +146,7 @@ body{
 }
 
 .adquiera-title{
-  font-size: em(40px);
+  font-size: em(35px);
   color: $negro;
   font-weight: 600;
   letter-spacing: 0.6px;
@@ -156,6 +163,7 @@ body{
   letter-spacing: 0.2px;
   color: #0e0e0e;
   opacity: .8;
+  margin-top: 20px;
 }
 
 .mano2{
