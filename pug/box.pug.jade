@@ -1,15 +1,17 @@
 -var pBox = "Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium "
--var box1 = {title:"Boton de Panico",text:pBox}
--var box2 = {title:"Notificacion Inmediata",text:pBox}
--var box3 = {title:"Alarma de Evacuacion",text:pBox}
+-var box1 = {url:"img/index2/boxs/group.png",title:"Boton de Panico",text:pBox}
+-var box2 = {url:"img/index2/boxs/group2.png",title:"Notificacion Inmediata",text:pBox}
+-var box3 = {url:"img/index2/boxs/group3.png",title:"Alarma de Evacuacion",text:pBox}
 -var boxs = [box1,box2,box3]
 
-mixin Box(title,text)
+mixin Box(url,title,text)
   .column.pad0
     .box-not
-      h2.title-box #{title}
+      .flex
+        img(src="#{url}")
+        h2.title-box #{title}
       p.text-box.esconder #{text}
       
 .columns.pad10
   each val in boxs
-    +Box(val.title,val.text)
+    +Box(val.url,val.title,val.text)

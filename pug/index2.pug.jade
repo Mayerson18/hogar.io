@@ -12,8 +12,9 @@ include header.pug.jade
         .column
           .h1-banner-container
             h1.h1-banner Una #[strong.strong App y Alarma] diseñada para la seguridad #[strong.strong Comunal y Vecinal]
-          each val in lisBanner
-            p.li-banner.center.esconder #{val}
+          .container-li-banner
+            each val in lisBanner
+              p.li-banner.esconder #{val}
         .column.right.pb0
           img.mano(src="img/index2/mano.png")
             
@@ -23,29 +24,35 @@ include header.pug.jade
     .flex-center.mb.center
       h3.solicita Solicita más Información #[strong.red 32523892]
     
-    .columns.esconder
-      .column
+    .columns.esconder.caracteristicas
+      .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica1.png")
         .caracteristica-foot.center FACIL DE USAR
-      .column
+      .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica2.png")
         .caracteristica-foot.center INTEGRACION VECINAL
-      .column
+      .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica3.png")
         .caracteristica-foot.center FACIL DE USAR
         
     .columns.adquiera.pad10.m0
       .column.is-7
         .adquiera-title Adquiera nuestra Alarma  
-        .adquiera-subtitle saquele el mayor probecho a nuesta App
+        .adquiera-subtitle saquele el mayor provecho a nuesta App
         p.adquiera-text.mb Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR. Keytar pickled next level keffiyeh drinking vinegar street art. Art
         .columns.is-fluid
           .column.is-4
-            .adquiera-text Active desde la App
+            .flex
+              img.img-adquiera(src="img/index2/adquiera/llamada.png" style="height:51px;")
+              .adquiera-text Active desde la App
           .column.is-4
-            .adquiera-text Active con llamada perdida
+            .flex
+              img.img-adquiera(src="img/index2/adquiera/noun.png" style="height:58px;")
+              .adquiera-text Active con llamada perdida
           .column.is-4
-            .adquiera-text.mb Active desde Boton de Panico
+            .flex
+              img.img-adquiera(src="img/index2/adquiera/shape.png" style="height:53px;")
+              .adquiera-text.mb Active desde Boton de Panico
         .descarga.space-between
           .left PROMOCION DE LANZAMIENTO
           .right 850.000$
@@ -67,7 +74,7 @@ include header.pug.jade
               .email Email:soporte@hogar.io
           .country Bogota Colombia 
             
-        .column
+        .column.pr6
           .box-contact
             form.form
               .field
