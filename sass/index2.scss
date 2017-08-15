@@ -1,0 +1,250 @@
+@function em($px){
+  @return ($px / 16px) * 1em;
+}
+
+$negro: #000000;
+$blanco: #ffffff;
+$rojo: #d00707;
+
+.nav-item img { max-height: 2.75rem; }
+.nav-item a, a.nav-item { color: $blanco; }
+
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.flex{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.flex-center{
+  @extend .flex;
+  justify-content: center;
+
+}
+
+.space-between{
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.center{ text-align: center; }
+
+.right{ text-align: right; }
+
+.pad10{ padding: 0px 10%;}
+
+.pad6{  padding: 0px 6em; }
+
+.pad1{  padding: 1em 0px; }
+
+.m0{ margin: 0px!important;}
+
+.mb{ margin-bottom: 2em; }
+
+.pb0{ padding-bottom: 0px; }
+
+.pad0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.nav-right{
+  @extend .flex;
+  justify-content: space-around;
+}
+
+.nav{
+  height: 10vh;
+  background-color: $negro;
+  color: $blanco;
+  &>.logo{
+    height: 8vh;
+  }
+}
+
+.strong{ color: $blanco; }
+
+.banner{
+  height: 90vh;
+  background-image: url("../img/index2/banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: $blanco;
+  padding-top: 5%;
+}
+
+.in{
+  height: 102.5%;
+}
+
+.h1-banner-container{
+  padding: 0px 2em;
+  margin-top: 10%;
+  background-color: $negro;
+  height: 15vh;
+  margin-bottom: 5%;
+  &>.h1-banner{
+    font-size: 2.5em;
+  }
+}
+
+.li-banner{
+  font-size: 1.2em;
+  margin-bottom: 5%;
+}
+
+.mano{
+  max-height: 100%;
+}
+
+.box-not{
+  padding: 2em;
+  background-color: #d8d8d8;
+  border: solid 1px #cccccc;
+  &>.title-box{
+    color: #0e0e0e;
+    font-size: 1.5em;
+  }
+}
+
+.solicita{
+  font-size: em(48px);
+  font-weight: 300;
+  color: $negro;
+  border-bottom: solid 3px #f10909;
+  width: auto;
+}
+
+.red{
+  color: #f10909;
+}
+
+.caracteristica-foot{
+  background-color: #181818;
+  font-size: em(30px);
+  font-weight: 300;
+  color: $blanco;
+  position: relative;
+  top: -6px;
+}
+
+.adquiera{
+  background-color: #f0f0f0;
+  padding-bottom: 1em;
+}
+
+.adquiera-title{
+  font-size: em(40px);
+  color: $negro;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+.adquiera-subtitle{
+  font-size: 1.2em;
+  color: #d00707;
+}
+
+.adquiera-text{
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.78;
+  letter-spacing: 0.2px;
+  color: #0e0e0e;
+  opacity: .8;
+}
+
+.mano2{
+  height: 80vh;
+}
+
+.descarga{
+  font-size: em(30px);
+  color: $blanco;
+  background-color: $rojo;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  padding: .5em;
+  &>.right{
+    font-size: 2em;
+  }
+  &>.left{
+    font-size: .8em;
+    width: 50%;
+  }
+}
+
+.contacto{
+  font-size: 1.3em;
+  color: #0e0e0e;
+}
+
+.footer{
+  background-color: #212121;
+  color: $blanco;
+
+}
+
+.title-footer{
+  font-size: 1.8em;
+}
+
+.subtitle-footer{
+  font-size: 1.2em;
+}
+
+.datos-footer{
+
+}
+
+.tel{ font-weight: bold;}
+
+.box-contact{
+  background-color: $blanco;
+  padding: 1em 10%;
+  border-radius: 13px;
+  &>.form{
+    &>.field{
+      &>.control{
+        &>input{
+          border: 0px;
+          box-shadow: initial;
+          border-bottom: 1px solid #979797;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:1366px) {
+  .h1-banner-container{
+    &>.h1-banner{ font-size: 2em;}
+  }
+}
+@media (max-width:700px) {
+
+  .pad6{
+    padding: 0px;
+  }
+
+  .esconder{ display: none; }
+
+  .h1-banner-container{
+    &>.h1-banner{ font-size: 1.1em;}
+    width: 90%;
+  }
+
+  .mano{ height: 40vh;}
+
+  .in{
+    height: 103.9%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+  }
+}

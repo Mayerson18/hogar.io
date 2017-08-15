@@ -31,18 +31,18 @@ include header.pug.jade
     link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
   body
     
-    //include device.pug.jade
+    include device.pug.jade
     include nav.pug.jade
     .columns
       //.cell
         img(src="img/cellphone.png")
         img(src="img/app-store.png")
         img(src="img/google-play.png")
-      .column.txt-banner
+      .column.txt-banner.is-4
         h1(data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: $scrollReveal repeat") Alarma comunal y vecinal hogar.io
         p.bounceInLeft.animated() #{p1} 
         a.bounceInLeft.animated.button.boton Mas Información
-      .column
+      .column.is-offset-2
         img(src="img/banner.png" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat")
           
     .columns.gris

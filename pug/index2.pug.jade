@@ -1,0 +1,88 @@
+//output:../public/index2.html
+
+-var lisBanner = ["Activacion y notificaciones en Segundos","Caracterizacion de la Emergencia ","Encienda la sirena de su Alarma desde la App","Notifique a su CAI mas cercano "]
+
+include header.pug.jade
+    link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
+  body
+    include nav.pug.jade
+    .banner
+      .columns.in
+        .column
+          .h1-banner-container
+            h1.h1-banner Una #[strong.strong App y Alarma] diseñada para la seguridad #[strong.strong Comunal y Vecinal]
+          each val in lisBanner
+            p.li-banner.center.esconder #{val}
+        .column.right.pb0
+          img.mano(src="img/index2/mano.png")
+            
+    
+    include box.pug.jade
+    
+    .flex-center.mb.center
+      h3.solicita Solicita más Información #[strong.red 32523892]
+    
+    .columns.esconder
+      .column
+        img.caracteristica(src="img/index2/caracteristicas/caracteristica1.png")
+        .caracteristica-foot.center FACIL DE USAR
+      .column
+        img.caracteristica(src="img/index2/caracteristicas/caracteristica2.png")
+        .caracteristica-foot.center INTEGRACION VECINAL
+      .column
+        img.caracteristica(src="img/index2/caracteristicas/caracteristica3.png")
+        .caracteristica-foot.center FACIL DE USAR
+        
+    .columns.adquiera.pad10.m0
+      .column
+        .adquiera-title Adquiera nuestra Alarma  
+        .adquiera-subtitle saquele el mayor probecho a nuesta App
+        p.adquiera-text.mb Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR. Keytar pickled next level keffiyeh drinking vinegar street art. Art
+        .columns.is-fluid
+          .column.is-4
+            .adquiera-text Active desde la App
+          .column.is-4
+            .adquiera-text Active con llamada perdida
+          .column.is-4
+            .adquiera-text.mb Active desde Boton de Panico
+        .descarga.space-between
+          .left PROMOCION DE LANZAMIENTO
+          .right 850.000$
+        .adquiera-title ¿Ya tienes una Alarma?
+        p.contacto Si ya tienes una Alarma No te preocupes #[strong.red Contactanos] y la haremos funcionar con nuestra app  
+      .column.center
+        img.mano2(src="img/index2/motorola-moto-g.png")
+        .descarga Descarga Gratis la Aplicacion
+        
+    .footer
+      .columns.center
+        .column.pad6
+          .title-footer.pad1 Quieres saber más o quieres que Visitemos tu Comunidad 
+          .subtitle-footer.pad1 No dudes en comunicarte con nosotros, resolveremos todas tus dudas y te ayudaremos
+          .datos-footer.center.pad1
+            .country Bogota Colombia 
+            .flex-center
+              .tel Tel: 322001238
+              .email Email:soporte@hogar.io
+            
+        .column
+          .box-contact
+            form.form
+              .field
+                .control
+                  input.input(required type="text" placeholder="Nombre")
+              .field
+                .control
+                  input.input(required type="email" placeholder="Email")
+              .field
+                .control
+                  input.input(required type="text" placeholder="Telefono")
+              .descarga Quiero más Información
+      
+    //include footer.pug.jade
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js")
+    script(src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js")
+    script(src="js/index.js")
