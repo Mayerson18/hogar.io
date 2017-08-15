@@ -142,7 +142,7 @@ body{
 
 .adquiera{
   background-color: #f0f0f0;
-  padding-bottom: 1em;
+  padding-bottom: 5em;
 }
 
 .adquiera-title{
@@ -150,6 +150,7 @@ body{
   color: $negro;
   font-weight: 600;
   letter-spacing: 0.6px;
+  margin-top: 35px;
 }
 .adquiera-subtitle{
   font-size: 1.2em;
@@ -157,7 +158,7 @@ body{
 }
 
 .adquiera-text{
-  font-size: 1em;
+  font-size: 0.95em;
   font-weight: 300;
   line-height: 1.78;
   letter-spacing: 0.2px;
@@ -170,8 +171,8 @@ body{
   height: 80vh;
 }
 
-.descarga{
-  font-size: em(30px);
+.descarga2{
+  font-size: em(17px);
   color: $blanco;
   background-color: $rojo;
   border-radius: 6px;
@@ -186,9 +187,28 @@ body{
   }
 }
 
+.descarga{
+  font-size: em(25px);
+  color: $blanco;
+  background-color: $rojo;
+  margin-left: 80px;
+  //border-radius: 0px;
+  //box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  padding: .3em;
+  &>.right{
+    font-size: 2em;
+    font-weight: bold;
+  }
+  &>.left{
+    font-size: .8em;
+    width: 50%;
+  }
+}
+
 .contacto{
   font-size: 1.3em;
-  color: #0e0e0e;
+  color: #656565;
+  margin-top: 10px;
 }
 
 .footer{
@@ -199,10 +219,12 @@ body{
 
 .title-footer{
   font-size: 1.8em;
+  font-weight: bold;
 }
 
 .subtitle-footer{
-  font-size: 1.2em;
+  font-size: 1em;
+  font-weight:normal;
 }
 
 .datos-footer{
