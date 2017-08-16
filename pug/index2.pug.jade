@@ -7,7 +7,7 @@ include header.pug.jade
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
     link(rel="stylesheet" href="devices/devices.min.css")
   body
-    include device.pug.jade
+    
     include nav.pug.jade
     .banner
       .columns.in
@@ -62,7 +62,8 @@ include header.pug.jade
         p.contacto Si ya tienes una Alarma No te preocupes #[strong.red Contactanos] y la haremos funcionar con nuestra app  
       .column.is-1
       .column.center.celular(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
-        img.mano2(src="img/index2/motorola-moto-g.png")
+        //img.mano2(src="img/index2/motorola-moto-g.png")
+        include device.pug.jade
         .descarga2 Descarga Gratis la Aplicacion
         
     .footer
