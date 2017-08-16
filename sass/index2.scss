@@ -9,65 +9,14 @@ $rojo: #d00707;
 .nav-item img { max-height: 2.75rem; }
 .nav-item a, a.nav-item { color: $blanco; }
 
+@import "animaciones";
+@import "utilidades";
+@import "banner";
+@import "margenes";
+@import "device";
+
 body{
   font-family: 'Open Sans', sans-serif;
-}
-
-.flex{
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
-}
-
-.flex-center{
-  @extend .flex;
-  justify-content: center;
-}
-
-.fadeInUp{
-  -webkit-animation-delay: .7s;
-}
-
-.fadeInRight{
-  -webkit-animation-delay: 1s;
-}
-
-.x{
-  -webkit-animation-delay: 2s;
-}
-
-.flex-end{
-  @extend .flex;
-  justify-content: flex-end;
-  flex-direction: column;
-}
-
-.space-between{
-  @extend .flex;
-  justify-content: space-between;
-}
-
-.center{ text-align: center; }
-
-.right{ text-align: right; }
-
-.pad10{ padding: 0px 10%;}
-
-.pad6{  padding: 0px 6em; }
-
-.pad1{  padding: 1em 0px; }
-
-.pr6{  padding-right: 6em; }
-
-.m0{ margin: 0px!important;}
-
-.mb{ margin-bottom: 2em; }
-
-.pb0{ padding-bottom: 0px; }
-
-.pad0{
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .nav-right{
@@ -85,45 +34,6 @@ body{
 }
 
 .strong{ color: $blanco; }
-
-.banner{
-  height: 90vh;
-  background-image: url("../img/index2/banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  //background-attachment: fixed;
-  color: $blanco;
-  padding-top: 5%;
-}
-
-.in{
-  height: 102.5%;
-}
-
-.h1-banner-container{
-  padding: 0px 2em;
-  margin-top: 10%;
-  background-color: $negro;
-  height: 15vh;
-  margin-bottom: 5%;
-  &>.h1-banner{
-    font-size: 2.5em;
-  }
-}
-
-.container-li-banner{
-  padding-left: 10%;
-}
-
-.li-banner{
-  font-size: 1.2em;
-  margin-bottom: 5%;
-}
-
-.mano{
-  max-height: 100%;
-}
 
 .box-not{
   padding: 2em;

@@ -1,0 +1,26 @@
+.flex{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.flex-center{
+  @extend .flex;
+  justify-content: center;
+}
+
+
+.flex-end{
+  @extend .flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.space-between{
+  @extend .flex;
+  justify-content: space-between;
+}
+
+.center{ text-align: center; }
+
+.right{ text-align: right; }

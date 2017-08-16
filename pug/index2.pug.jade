@@ -5,7 +5,9 @@
 include header.pug.jade
     link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
+    link(rel="stylesheet" href="devices/devices.min.css")
   body
+    include device.pug.jade
     include nav.pug.jade
     .banner
       .columns.in
