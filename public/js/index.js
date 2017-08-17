@@ -17,3 +17,16 @@ var someBeforeOrAfterFunction = function(e, animationContext){
 	//The Animation Context Instance
 	console.log(animationContext);
 }
+
+
+$(".click").click(function(){
+  $(".modal").addClass("is-active");
+})
+
+$(".modal-background").click(function(){
+  $(".modal").removeClass("is-active");
+})
+
+$(".modal-close").click(function(){
+  $(".modal").removeClass("is-active");
+})
