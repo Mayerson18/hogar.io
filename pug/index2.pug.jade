@@ -1,6 +1,6 @@
 //output:../public/index2.html
 
--var lisBanner = ["Activacion y notificaciones en Segundos","Caracterizacion de la Emergencia ","Encienda la sirena de su Alarma desde la App","Notifique a su CAI mas cercano "]
+-var lisBanner = ["Activacion y notificaciones en Segundos","Caracterización de la Emergencia ","Activación de las sirenas de su Alarma desde la App","Notificación a la Autoridades" , "La mejor opción para frentes de seguridad, conjuntos residenciales y comercios"]
 
 include header.pug.jade
     link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
@@ -13,7 +13,7 @@ include header.pug.jade
       .columns.in
         .column
           .h1-banner-container
-            h1.h1-banner Una #[strong.strong App y Alarma] diseñada para la seguridad #[strong.strong Comunal y Vecinal]
+            h1.h1-banner Una #[strong.strong Alarma con App] diseñada para la seguridad #[strong.strong Comunal o Vecinal]
           .container-li-banner
             each val in lisBanner
               p.li-banner.esconder #{val}
@@ -40,20 +40,20 @@ include header.pug.jade
     .columns.adquiera.pad10.m0
       .column.is-7
         .adquiera-title.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Adquiera nuestra Alarma  
-        .adquiera-subtitle.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") saquele el mayor provecho a nuesta App
-        p.adquiera-text.mb.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Hella narwhal Cosby sweater McSweeney's, salvia kitsch before they sold out High Life. Umami tattooed sriracha meggings pickled Marfa Blue Bottle High Life next level four loko PBR. Keytar pickled next level keffiyeh drinking vinegar street art. Art
+        .adquiera-subtitle.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Saquele el mayor provecho a nuesta App
+        p.adquiera-text.mb.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Nuestra alarma cuenta con altos estándares de calidad; la misma incluye un protocolo de comunicación y de auto chequeo, en caso de ser inabilitada nuesta App sigue funcionando y todos los usuarios son notificados y pueden seguir interactuando. 
         .columns.is-fluid.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
           .column.is-4
             .flex
-              img.img-adquiera(src="img/index2/adquiera/llamada.png" style="height:51px;")
+              img.img-adquiera(src="img/index2/adquiera/shape.png" style="height:50px;")
               .adquiera-text Active desde la App
           .column.is-4
             .flex
-              img.img-adquiera(src="img/index2/adquiera/noun.png" style="height:58px;")
+              img.img-adquiera(src="img/index2/adquiera/llamada.png" style="height:50px;")
               .adquiera-text Active con llamada perdida
           .column.is-4
             .flex
-              img.img-adquiera(src="img/index2/adquiera/shape.png" style="height:53px;")
+              img.img-adquiera(src="img/index2/adquiera/noun.png" style="height:50px;")
               .adquiera-text.mb Active desde Boton de Panico
         .descarga.space-between
           .left PROMOCION DE LANZAMIENTO
