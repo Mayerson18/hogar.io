@@ -55,7 +55,7 @@ include header.pug.jade
             .flex
               img.img-adquiera(src="img/index2/adquiera/noun.png" style="height:50px;")
               .adquiera-text.mb Active desde Boton de Panico
-        .descarga.space-between
+        .descarga.space-between.click
           .left PROMOCION DE LANZAMIENTO
           .right 850.000$
         .adquiera-title ¿Ya tienes una Alarma?
@@ -64,7 +64,7 @@ include header.pug.jade
       .column.center.celular(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
         //img.mano2(src="img/index2/motorola-moto-g.png")
         include device.pug.jade
-        .descarga2 Descarga Gratis la Aplicacion
+        .descarga2.click2 Descarga Gratis la Aplicacion
         
     .footer
       .columns.center
@@ -78,20 +78,10 @@ include header.pug.jade
           .country Bogota Colombia 
             
         .column.pr6
-          .box-contact
-            form.form
-              .field
-                .control
-                  input.input(required type="text" placeholder="Nombre")
-              .field
-                .control
-                  input.input(required type="email" placeholder="Email")
-              .field
-                .control
-                  input.input(required type="text" placeholder="Telefono")
-              .descarga2 Quiero más Información
+          include contactenos.pug.jade
       
     include modal.pug.jade
+    include modal2.pug.jade
     //include footer.pug.jade
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")

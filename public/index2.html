@@ -98,7 +98,7 @@
           </div>
         </div>
       </div>
-      <div class="descarga space-between">
+      <div class="descarga space-between click">
         <div class="left">PROMOCION DE LANZAMIENTO</div>
         <div class="right">850.000$</div>
       </div>
@@ -122,7 +122,7 @@
         <!--.home-->
         <div class="bottom-ba"></div>
       </div>
-      <div class="descarga2">Descarga Gratis la Aplicacion</div>
+      <div class="descarga2 click2">Descarga Gratis la Aplicacion</div>
     </div>
   </div>
   <div class="footer">
@@ -159,13 +159,115 @@
             <div class="descarga2">Quiero más Información</div>
           </form>
         </div>
+        <!--.columns.contactenos
+        .column
+          .inline
+            img(src="img/atis-img.png",alt="ATIS",class="banner",height="405px")
+            .address
+              p.mb-50 <strong>Adress:</strong> 2500 NW 79th Ave Suite 177 Doral, fl 33122
+              p.mb-50 <strong>Telephone:</strong> (786) 309 3391
+              p.mb-50 <strong>FAX:</strong> (786) 309 3391
+              p.mb-50 <strong>EMAIL:</strong> info@atisre.com
+              a(href="#")
+                img(src="img/facebook.png",alt="ATIS")
+              a(href="#")
+                img(src="img/instagram.png",alt="ATIS")
+              a(href="#")
+                img(src="img/linked-in.png",alt="ATIS")
+            
+        -->
+        <!--  .column
+        .box-contact
+          form(action="" method="POST")
+            legend Contactenos
+            p.control
+              input(type="text" name="email" placeholder="EMAIL" required )
+            p.control
+              input(type="text" name="telefono" required placeholder="TELEFONO")
+            p.control
+              input(type="text" name="nombre" required placeholder="NOMBRE")
+            p.control
+              textarea(name="mensaje" placeholder="EN QUE PODEMOS AYUDARTE?" required)
+            p.control
+              button.button.boton CONTACTANOS
+        -->
       </div>
     </div>
   </div>
-  <div class="modal">
+  <div class="modal modal1">
     <div class="modal-background"></div>
     <div class="modal-content">
-      <div class="cd">Hola coki</div>
+      <div class="banner-modal">
+        <div class="columns in in-modal">
+          <div class="column">
+            <div class="h1-banner-container">
+              <h1 class="h1-banner">Una <strong class="strong">Alarma con App</strong> diseñada para la seguridad <strong class="strong">Comunal o Vecinal</strong></h1>
+            </div>
+          </div>
+          <div class="column right pb0 esconder"><img src="img/index2/mano.png" class="mano fadeInRight animated"></div>
+        </div>
+      </div>
+      <div class="modal-body pad6">
+        <div class="box-contact">
+          <form class="form">
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Nombre" name="nombre" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="email" placeholder="Email" name="email" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Telefono" name="telefono" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Ciudad" name="ciudad" class="input">
+              </div>
+            </div>
+            <div class="descarga2 modal-btn center">Cotizar</div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <button class="modal-close"></button>
+  </div>
+  <div class="modal modal2">
+    <div class="modal-background"></div>
+    <div class="modal-content"><img src="img/index2/group.png">
+      <!--.banner-modal2-->
+      <div class="modal-body pad6">
+        <div class="box-contact">
+          <form class="form">
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Nombre" name="nombre" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="email" placeholder="Email" name="email" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Telefono" name="telefono" class="input">
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input required type="text" placeholder="Ciudad" name="ciudad" class="input">
+              </div>
+            </div>
+            <div class="descarga2 modal-btn center">Descargar</div>
+          </form>
+        </div>
+      </div>
     </div>
     <button class="modal-close"></button>
   </div>
