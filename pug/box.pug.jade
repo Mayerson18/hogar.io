@@ -15,7 +15,7 @@ mixin Box(url,title,text)
         img(src="#{url}")
         h2.title-box #{title}
       p.text-box.esconder #{text}
-      
+
 .columns.pad10
   each val in boxs
     +Box(val.url,val.title,val.text)
