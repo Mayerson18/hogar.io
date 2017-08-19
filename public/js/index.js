@@ -26,7 +26,7 @@ analytics.page();
 }}();
 
 function Cotizar(){
-  analytics.page(‘Cotizar’, {
+  analytics.page('Cotizar', {
     title: 'Cotizar',
     url: 'https://hogar.io',
     path: '/Cotizar'
@@ -34,11 +34,11 @@ function Cotizar(){
 }
 
 function Descargar(){
-  analytics.page(‘Descargar’, {
-    title: ‘Descargar’,
+  /*analytics.page(‘Descargar', {
+    title: ‘Descargar',
     url: 'https://hogar.io',
-    path: ‘/Descargar’
-  });
+    path: ‘/Descargar'
+  });*/
 }
 
 $(".click").click(function(){
@@ -75,20 +75,20 @@ $('form').submit(function(ev) {
     //this.submit(); // If all the validations succeeded
 
     if($(this).hasClass("cotizar")){
-      analytics.track(’Solicito Cotización’, {
+      /*analytics.track('Solicito Cotización', {
         title: 'Solicito Cotización',
-      });
+      });*/
     }
 
     if($(this).hasClass("Descarga")){
-      analytics.track(’Solicito Descarga’, {
+      /*analytics.track('Solicito Descarga', {
         title: 'Solicito Descarga',
-      });
+      });*/
     }
 
     if($(this).hasClass("form-contactenos")){
-      analytics.track(’Solicito Descarga’, {
+      /*analytics.track('Solicito Descarga', {
         title: 'Solicito Descarga',
-      });
+      });*/
     }
 });

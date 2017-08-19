@@ -36,8 +36,13 @@ $rojo: #d00707;
   }
 }
 
+.click{
+  cursor: pointer;
+}
+
 .title-left2{
-  font-size: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .banner-modal2{
@@ -156,6 +161,10 @@ video{    max-height: 110%;}
   color: #0e0e0e;
   opacity: .8;
   //margin-top: 20px;
+}
+
+.bajar{
+  padding-top: 1em;
 }
 
 .img-adquiera{
