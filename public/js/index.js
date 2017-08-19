@@ -1,5 +1,34 @@
 "use strict";
 
+
+    $('form').validate({ // initialize the plugin
+       rules: {
+           nombre: {
+               required: true
+           },
+           email: {
+               required: true,
+               email: true
+           },
+           telefono: {
+             required: true
+           }
+       },
+       submitHandler: function (form) {
+         var form = $(form).serializeArray());
+         var nombre = form[0].value;
+         var email = form[1].value;
+         var telefono = form[2].value;
+           alert('Enviado');
+           analytics.identify('miguel@parawebs.com', {
+             firstName: nombre,
+             lastName: telefono,
+             email: email
+           });
+           return false;
+       }
+   });
+
 $(".nav-toggle").click(function() {
   if($(".nav-menu").hasClass("is-active")){
     $(".nav-menu").removeClass("is-active");
@@ -34,11 +63,11 @@ function Cotizar(){
 }
 
 function Descargar(){
-  /*analytics.page(‘Descargar', {
-    title: ‘Descargar',
+  analytics.page('Descargar', {
+    title: 'Descargar',
     url: 'https://hogar.io',
-    path: ‘/Descargar'
-  });*/
+    path: '/Descargar'
+  });
 }
 
 $(".click").click(function(){
@@ -71,24 +100,32 @@ $('.submitt').click(function(){
 
 $('form').submit(function(ev) {
     ev.preventDefault(); // to stop the form from submitting
-    /* Validations go here */
-    //this.submit(); // If all the validations succeeded
 
     if($(this).hasClass("cotizar")){
-      /*analytics.track('Solicito Cotización', {
+      analytics.track('Solicito Cotización', {
         title: 'Solicito Cotización',
-      });*/
+      });
     }
 
     if($(this).hasClass("Descarga")){
-      /*analytics.track('Solicito Descarga', {
+      analytics.track('Solicito Descarga', {
         title: 'Solicito Descarga',
-      });*/
+      });
     }
 
     if($(this).hasClass("form-contactenos")){
-      /*analytics.track('Solicito Descarga', {
+      analytics.track('Solicito Descarga', {
         title: 'Solicito Descarga',
-      });*/
+      });
+    }
+
+
+    if(false){
+      this.submit();
+      analytics.identify('miguel@parawebs.com', {
+        firstName: 'Peter',
+        lastName: 'Gibbons',
+        email: 'miguel@parawebs.com'
+      });
     }
 });
