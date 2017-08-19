@@ -1,4 +1,5 @@
 "use strict";
+
 $(".nav-toggle").click(function() {
   if($(".nav-menu").hasClass("is-active")){
     $(".nav-menu").removeClass("is-active");
@@ -19,6 +20,26 @@ var someBeforeOrAfterFunction = function(e, animationContext){
 }
 
 
+!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+analytics.load("Uuthfscltct5TU3PKnzTR9YiuTvvCkD0");
+analytics.page();
+}}();
+
+function Cotizar(){
+  analytics.page(‘Cotizar’, {
+    title: 'Cotizar',
+    url: 'https://hogar.io',
+    path: '/Cotizar'
+  });
+}
+
+function Descargar(){
+  analytics.page(‘Descargar’, {
+    title: ‘Descargar’,
+    url: 'https://hogar.io',
+    path: ‘/Descargar’
+  });
+}
 
 $(".click").click(function(){
   $(".modal").addClass("fadeIn animated");
@@ -26,10 +47,12 @@ $(".click").click(function(){
 
 $(".click1").click(function(){
   $(".modal1").addClass("is-active");
+  Cotizar();
 })
 
 $(".click2").click(function(){
   $(".modal2").addClass("is-active");
+  Descargar();
 })
 
 $(".modal-background").click(function(){
@@ -42,7 +65,30 @@ $(".modal-close").click(function(){
   $(".modal").removeClass("fadeIn animated");
 })
 
-!function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
-analytics.load("Uuthfscltct5TU3PKnzTR9YiuTvvCkD0");
-analytics.page();
-}}();
+$('.submitt').click(function(){
+    ($(this).parent().submit())
+});
+
+$('form').submit(function(ev) {
+    ev.preventDefault(); // to stop the form from submitting
+    /* Validations go here */
+    //this.submit(); // If all the validations succeeded
+
+    if($(this).hasClass("cotizar")){
+      analytics.track(’Solicito Cotización’, {
+        title: 'Solicito Cotización',
+      });
+    }
+
+    if($(this).hasClass("Descarga")){
+      analytics.track(’Solicito Descarga’, {
+        title: 'Solicito Descarga',
+      });
+    }
+
+    if($(this).hasClass("form-contactenos")){
+      analytics.track(’Solicito Descarga’, {
+        title: 'Solicito Descarga',
+      });
+    }
+});
