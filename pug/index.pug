@@ -19,18 +19,19 @@ mixin Cards(p)
 mixin lis(text,className,ani,to)
   li.lis(class="#{className}" data-anijs="if: mouseover, do: #{ani} animated,to: #{to}")
     a(href="#" ) #{text}
-    
+
+
 mixin Features(img,text)
   .column.features
     img(src=img data-anijs="if: scroll, on: window, do: bounce animated, before: $scrollReveal repeat")
     p.center=text
-        
+
 include header.pug.jade
     //link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css")
     link(rel="stylesheet" href="devices/devices.min.css")
     link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
   body
-    
+
     include device.pug.jade
     include nav.pug.jade
     .columns
@@ -40,11 +41,11 @@ include header.pug.jade
         img(src="img/google-play.png")
       .column.txt-banner.is-4
         h1(data-anijs="if: scroll, on: window, do: bounceInLeft animated, before: $scrollReveal repeat") Alarma comunal y vecinal hogar.io
-        p.bounceInLeft.animated() #{p1} 
+        p.bounceInLeft.animated() #{p1}
         a.bounceInLeft.animated.button.boton Mas Información
       .column.is-offset-2
         img(src="img/banner.png" data-anijs="if: scroll, on: window, do: zoomIn animated, before: $scrollReveal repeat")
-          
+
     .columns.gris
       include article.pug.jade
     .columns.gris
@@ -54,7 +55,7 @@ include header.pug.jade
       each val in features
         +Features(val.img,val.p)
     br
-      
+
     .columns
       .column
         h2.title-alarm="Conozca mas sobre Nuestra Alarma y App"
@@ -90,32 +91,32 @@ include header.pug.jade
           .card-header.flex-center Plan Integración
           .card-content
             +Cards(p_card2)
-          .card-footer.flex-spb 
-            .left 
-              .precio Precio por Usuario 
-            .right 
-              .costo 2500$ 
+          .card-footer.flex-spb
+            .left
+              .precio Precio por Usuario
+            .right
+              .costo 2500$
               .mes Mensual
       .column
         .card(data-anijs="if: scroll, on: window, do: flipInY animated, before: $scrollReveal repeat")
           .card-header.flex-center Alarma Hogar.io
-          .card-content 
+          .card-content
             +Cards(p_card3)
           .card-prefooter
             img(src="img/logo.png")
           .card-footer.flex-spb
-            .left 
-              .precio Precio por Usuario 
+            .left
+              .precio Precio por Usuario
               .anio Adicional o despues del año
-            .right 
-              .costo 2000$ 
+            .right
+              .costo 2000$
               .mes Mensual
-    
+
     include footer.pug.jade
     script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/AniJS/0.9.3/anijs-min.js")
     script(src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js")
-      
-      
+
+
     script(src="js/index.js")

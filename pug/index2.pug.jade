@@ -1,13 +1,13 @@
-//output:../public/index2.html
+//output:../public/index.html
 
 -var lisBanner = ["Activación y notificaciones en segundos.","Caracterización de la emergencia.","Activación de las sirenas de su alarma desde la App.","Notificación a las autoridades." , "La mejor opción para frentes de seguridad, conjuntos residenciales y comercios."]
 
 include header.pug.jade
-    link(rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css")
+    link(rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css")
     link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans")
     link(rel="stylesheet" href="devices/devices.min.css")
   body
-    
+
     include nav.pug.jade
     .banner
       .columns.in
@@ -19,13 +19,12 @@ include header.pug.jade
               p.li-banner.esconder #{val}
         .column.right.pb0
           img.mano.fadeInRight.animated(src="img/index2/mano.png")
-            
-    
+
     include box.pug.jade
-    
+
     .flex-center.mb.center(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
       h3.solicita Solicita más Información #[strong.red 300 5662659]
-    
+
     .columns.esconder.caracteristicas(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
       .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica1.png")
@@ -36,12 +35,12 @@ include header.pug.jade
       .column.flex-end
         img.caracteristica(src="img/index2/caracteristicas/caracteristica3.png")
         .caracteristica-foot.center FACIL DE USAR
-        
+
     .columns.adquiera.pad10.m0
       .column.is-7
-        .adquiera-title.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Adquiera nuestra Alarma  
+        .adquiera-title.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Adquiera nuestra Alarma
         .adquiera-subtitle.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Saquele el mayor provecho a nuesta App
-        p.adquiera-text.mb.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Nuestra alarma cuenta con altos estándares de calidad; la misma incluye un protocolo de comunicación y de auto chequeo, en caso de ser inhabilitada nuestra App sigue funcionando, y todos los usuarios son notificados y pueden seguir interactuando. 
+        p.adquiera-text.mb.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal") Nuestra alarma cuenta con altos estándares de calidad; la misma incluye un protocolo de comunicación y de auto chequeo, en caso de ser inhabilitada nuestra App sigue funcionando, y todos los usuarios son notificados y pueden seguir interactuando.
         .columns.is-fluid.x(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
           .column.is-4
             .flex
@@ -59,27 +58,27 @@ include header.pug.jade
           .left PROMOCION DE LANZAMIENTO
           .right 850.000$
         .adquiera-title ¿Ya tienes una Alarma?
-        p.contacto Si ya tienes una Alarma no te preocupes, #[strong.red Contáctanos] y la haremos funcionar con nuestra App. 
+        p.contacto Si ya tienes una Alarma no te preocupes, #[strong.red Contáctanos] y la haremos funcionar con nuestra App.
       .column.is-1
       .column.center.celular(data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal")
         //img.mano2(src="img/index2/motorola-moto-g.png")
         include device.pug.jade
         .descarga2.click2.click Descarga Gratis la Aplicacion
-        
+
     .footer
       .columns.center
         .column.pad6
-          .title-footer ¿Quieres saber más o quieres que visitemos tu comunidad? 
-          .subtitle-footer.pad1 No dudes en comunicarte con nosotros, estamos para resolver tus dudas y ayudarte. 
+          .title-footer ¿Quieres saber más o quieres que visitemos tu comunidad?
+          .subtitle-footer.pad1 No dudes en comunicarte con nosotros, estamos para resolver tus dudas y ayudarte.
           .datos-footer.center
             .flex-center
               .tel Tel: 300 5662659
               .email Email:ventas@hogar.io
-          .country Bogota Colombia 
-            
+          .country Bogota Colombia
+
         .column.pr6
           include contactenos.pug.jade
-      
+
     include modal.pug.jade
     include modal2.pug.jade
     //include footer.pug.jade

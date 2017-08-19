@@ -1,15 +1,15 @@
 mixin as()
   each val in ["Vecinal","Comercial","Administradores"]
     a.nav-item #{val}
-    
+
 nav.nav
   .nav-left
     a.nav-item
       img.logo(src="img/index2/logo.png",alt="hogar.io")
-      
+
   span.nav-toggle
     each val in [1, 2, 3]
       span
-  
+
   .nav-right.nav-menu
     +as()

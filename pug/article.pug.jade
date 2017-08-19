@@ -4,13 +4,13 @@
 -var art4 = {img:"img/group4.png",title:"Notificaciones inmediatas"}
 -var art5 = {img:"img/group5.png",title:"Diferentes tipos de alarmas"}
 - var articles = [art1,art2,art3,art4,art5]
-  
+
 mixin article(img,title)
   .column.art.center(data-anijs="if: scroll, on: window, do: fadeInRight animated, before: $scrollReveal")
     .flex-center
       .container-art-img
         img.art-img(src=img)
     h2=title
-    
+
 each val in articles
   +article(val.img,val.title)
