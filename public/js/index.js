@@ -1,5 +1,10 @@
 "use strict";
 
+function snack() {
+   var x = document.getElementById("snackbar")
+   x.className = "show";
+   setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+ }
 
     $('form').validate({ // initialize the plugin
        rules: {
@@ -15,16 +20,16 @@
            }
        },
        submitHandler: function (form) {
-         var form = $(form).serializeArray());
+         var form = $(form).serializeArray();
          var nombre = form[0].value;
          var email = form[1].value;
          var telefono = form[2].value;
-           alert('Enviado');
            analytics.identify('miguel@parawebs.com', {
              firstName: nombre,
              lastName: telefono,
              email: email
            });
+           snack();//ENVIADO
            return false;
        }
    });
