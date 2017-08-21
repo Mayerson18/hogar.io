@@ -10,13 +10,33 @@ var config = {
 };
 firebase.initializeApp(config);
 
+/*let nombre = firebase.database().ref().child('nombre');
+let telefono = firebase.database().ref().child('telefono');
+let email = firebase.database().ref().child('email');*/
+
+function writeNewPost(name,email,cel,ciudad) {
+  // A post entry.
+  var postData = {
+    nombre: name,
+    email: email,
+    telefono: cel,
+    ciudad: ciudad
+  };
+  // Get a key for a new Post.
+  var newPostKey = firebase.database().ref().child('posts').push().key;
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  var updates = {};
+  updates['/posts/' + newPostKey] = postData;
+  return firebase.database().ref().update(updates);
+}
+
 function snack() {
    var x = document.getElementById("snackbar")
    x.className = "show";
    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
  }
 
-    $('form').validate({ // initialize the plugin
+    $('.form-contactenos').validate({ // initialize the plugin
        rules: {
            nombre: {
                required: true
@@ -42,6 +62,11 @@ function snack() {
          var nombre = form[0].value;
          var email = form[1].value;
          var telefono = form[2].value;
+         let ciudad = "";
+         if( typeof form[3] != "undefined"){
+          ciudad = form[3].value;
+         }
+         writeNewPost(nombre,email,telefono,ciudad);
          analytics.identify('miguel@parawebs.com', {
            firstName: nombre,
            lastName: telefono,
@@ -50,7 +75,89 @@ function snack() {
          snack();//ENVIADO
          return false;
        }
-   });
+    });
+
+    $('.cotizar').validate({ // initialize the plugin
+       rules: {
+           nombre: {
+               required: true
+           },
+           email: {
+               required: true,
+               email: true
+           },
+           telefono: {
+             required: true
+           }
+       },
+       messages: {
+         nombre: "Por favor especifica tu nombre",
+         email: {
+           required: "Necesitamos tu dirección de correo",
+           email: "Tu correo debe llevar el siguiente formato name@domain.com"
+         },
+         telefono: "Por favor especifica tu numero telefonico"
+       },
+       submitHandler: function (form) {
+         var form = $(form).serializeArray();
+         var nombre = form[0].value;
+         var email = form[1].value;
+         var telefono = form[2].value;
+         let ciudad = "";
+         if( typeof form[3] != "undefined"){
+          ciudad = form[3].value;
+         }
+         writeNewPost(nombre,email,telefono,ciudad);
+         analytics.identify('miguel@parawebs.com', {
+           firstName: nombre,
+           lastName: telefono,
+           email: email
+         });
+         snack();//ENVIADO
+         return false;
+       }
+    });
+
+    $('.Descarga').validate({ // initialize the plugin
+       rules: {
+           nombre: {
+               required: true
+           },
+           email: {
+               required: true,
+               email: true
+           },
+           telefono: {
+             required: true
+           }
+       },
+       messages: {
+         nombre: "Por favor especifica tu nombre",
+         email: {
+           required: "Necesitamos tu dirección de correo",
+           email: "Tu correo debe llevar el siguiente formato name@domain.com"
+         },
+         telefono: "Por favor especifica tu numero telefonico"
+       },
+       submitHandler: function (form) {
+         var form = $(form).serializeArray();
+         var nombre = form[0].value;
+         var email = form[1].value;
+         var telefono = form[2].value;
+         let ciudad = "";
+         if( typeof form[3] != "undefined"){
+          ciudad = form[3].value;
+         }
+         writeNewPost(nombre,email,telefono,ciudad);
+         analytics.identify('miguel@parawebs.com', {
+           firstName: nombre,
+           lastName: telefono,
+           email: email
+         });
+         snack();//ENVIADO
+         return false;
+       }
+    });
 
 $(".nav-toggle").click(function() {
   if($(".nav-menu").hasClass("is-active")){
