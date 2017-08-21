@@ -1,4 +1,14 @@
 "use strict";
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyD819a4twnv3KRHnEtoM1j6eeithMWOsaU",
+  authDomain: "hogar-4cb77.firebaseapp.com",
+  databaseURL: "https://hogar-4cb77.firebaseio.com",
+  projectId: "hogar-4cb77",
+  storageBucket: "hogar-4cb77.appspot.com",
+  messagingSenderId: "178630339964"
+};
+firebase.initializeApp(config);
 
 function snack() {
    var x = document.getElementById("snackbar")
@@ -19,18 +29,26 @@ function snack() {
              required: true
            }
        },
+       messages: {
+         nombre: "Por favor especifica tu nombre",
+         email: {
+           required: "Necesitamos tu dirección de correo",
+           email: "Tu correo debe llevar el siguiente formato name@domain.com"
+         },
+         telefono: "Por favor especifica tu numero telefonico"
+       },
        submitHandler: function (form) {
          var form = $(form).serializeArray();
          var nombre = form[0].value;
          var email = form[1].value;
          var telefono = form[2].value;
-           analytics.identify('miguel@parawebs.com', {
-             firstName: nombre,
-             lastName: telefono,
-             email: email
-           });
-           snack();//ENVIADO
-           return false;
+         analytics.identify('miguel@parawebs.com', {
+           firstName: nombre,
+           lastName: telefono,
+           email: email
+         });
+         snack();//ENVIADO
+         return false;
        }
    });
 
@@ -124,13 +142,4 @@ $('form').submit(function(ev) {
       });
     }
 
-
-    if(false){
-      this.submit();
-      analytics.identify('miguel@parawebs.com', {
-        firstName: 'Peter',
-        lastName: 'Gibbons',
-        email: 'miguel@parawebs.com'
-      });
-    }
 });
