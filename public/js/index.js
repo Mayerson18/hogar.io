@@ -74,8 +74,8 @@ function snack() {
           email: email,
           plan: "premium"
         });
-
          snack();//ENVIADO
+         Close();
          return false;
        }
     });
@@ -119,6 +119,7 @@ function snack() {
           plan: "premium"
         });
          snack();//ENVIADO
+         Close();
          return false;
        }
     });
