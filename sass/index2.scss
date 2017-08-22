@@ -78,6 +78,10 @@ video{    max-height: 110%;}
   justify-content: space-around;
 }
 
+.nav-left{
+  overflow: hidden;
+}
+
 .nav{
   height: 10vh;
   background-color: $negro;
@@ -260,6 +264,8 @@ video{    max-height: 110%;}
   }
 }
 
+.mostrar{ display: none; }
+
 @media (max-width:1366px) {
   .h1-banner-container{
     &>.h1-banner{ font-size: 2em;}
@@ -288,6 +294,8 @@ video{    max-height: 110%;}
   }
 
   .esconder{ display: none; }
+
+  .mostrar{ display: initial; }
 
   .h1-banner-container{
     &>.h1-banner{ font-size: 1.1em;}
