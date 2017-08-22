@@ -67,7 +67,7 @@ function snack() {
           ciudad = form[3].value;
          }
          writeNewPost(nombre,email,telefono,ciudad);
-         analytics.identify('miguel@parawebs.com', {
+         analytics.identify(email, {
            firstName: nombre,
            lastName: telefono,
            email: email
@@ -108,7 +108,7 @@ function snack() {
           ciudad = form[3].value;
          }
          writeNewPost(nombre,email,telefono,ciudad);
-         analytics.identify('miguel@parawebs.com', {
+         analytics.identify(email, {
            firstName: nombre,
            lastName: telefono,
            email: email
@@ -149,7 +149,7 @@ function snack() {
           ciudad = form[3].value;
          }
          writeNewPost(nombre,email,telefono,ciudad);
-         analytics.identify('miguel@parawebs.com', {
+         analytics.identify(email, {
            firstName: nombre,
            lastName: telefono,
            email: email
