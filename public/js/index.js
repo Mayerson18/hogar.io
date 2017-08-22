@@ -230,6 +230,18 @@ $('.submitt').click(function(){
 
 $('form').submit(function(ev) {
     ev.preventDefault(); // to stop the form from submitting
+    var form = $(this).serializeArray();
+    var nombre = form[0].value;
+    var email = form[1].value;
+    var telefono = form[2].value;
+    let ciudad = "";
+    if( typeof form[3] != "undefined"){
+     ciudad = form[3].value;
+    }
+
+    $(".nombre").val(nombre);
+    $(".email").val(email);
+
 
     if($(this).hasClass("cotizar")){
       analytics.track('Solicito Cotización', {
