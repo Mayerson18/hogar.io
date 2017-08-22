@@ -155,6 +155,7 @@ function snack() {
            email: email
          });
          snack();//ENVIADO
+         Close();
          return false;
        }
     });
@@ -215,18 +216,21 @@ $(".click2").click(function(){
 })
 
 $(".modal-background").click(function(){
-  $(".modal").removeClass("is-active");
-  $(".modal").removeClass("fadeIn animated");
+  Close();
 })
 
 $(".modal-close").click(function(){
-  $(".modal").removeClass("is-active");
-  $(".modal").removeClass("fadeIn animated");
+  Close();
 })
 
 $('.submitt').click(function(){
     ($(this).parent().submit())
 });
+
+function Close(){
+  $(".modal").removeClass("is-active");
+  $(".modal").removeClass("fadeIn animated");
+}
 
 $('form').submit(function(ev) {
     ev.preventDefault(); // to stop the form from submitting
