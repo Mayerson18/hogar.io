@@ -264,7 +264,10 @@ video{    max-height: 110%;}
   }
 }
 
-.mostrar{ display: none; }
+.mostrar{
+  display: none;
+  width: 100%;
+}
 
 @media (max-width:1366px) {
   .h1-banner-container{
@@ -272,6 +275,8 @@ video{    max-height: 110%;}
   }
 }
 @media (max-width:700px) {
+
+  .box-not{ height: inherit;}
 
   .marvel-device.iphone6 {
     width: 210px !important;
@@ -295,7 +300,7 @@ video{    max-height: 110%;}
 
   .esconder{ display: none; }
 
-  .mostrar{ display: initial; }
+  .mostrar{ display: initial;}
 
   .h1-banner-container{
     &>.h1-banner{ font-size: 1.1em;}
