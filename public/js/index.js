@@ -68,10 +68,13 @@ function snack() {
          }
          writeNewPost(nombre,email,telefono,ciudad);
          analytics.identify(email, {
-           firstName: nombre,
-           lastName: telefono,
-           email: email
-         });
+          name: nombre,
+          firstName : nombre,
+          lastName : "",
+          email: email,
+          plan: "premium"
+        });
+
          snack();//ENVIADO
          return false;
        }
@@ -109,10 +112,12 @@ function snack() {
          }
          writeNewPost(nombre,email,telefono,ciudad);
          analytics.identify(email, {
-           firstName: nombre,
-           lastName: telefono,
-           email: email
-         });
+          name: nombre,
+          firstName : nombre,
+          lastName : "",
+          email: email,
+          plan: "premium"
+        });
          snack();//ENVIADO
          return false;
        }
@@ -150,10 +155,12 @@ function snack() {
          }
          writeNewPost(nombre,email,telefono,ciudad);
          analytics.identify(email, {
-           firstName: nombre,
-           lastName: telefono,
-           email: email
-         });
+          name: nombre,
+          firstName : nombre,
+          lastName : "",
+          email: email,
+          plan: "premium"
+        });
          snack();//ENVIADO
          Close();
          return false;
@@ -184,6 +191,17 @@ var someBeforeOrAfterFunction = function(e, animationContext){
 analytics.load("Uuthfscltct5TU3PKnzTR9YiuTvvCkD0");
 analytics.page();
 }}();
+
+/*
+analytics.identify("potus@potus.com", {
+ name: "potus Gibbons",
+ firstName : "potus",
+ lastName : "",
+ email: "potus@potus.com",
+ plan: "premium"
+ //logins: 5
+});
+*/
 
 function Cotizar(){
   analytics.page('Cotizar', {
