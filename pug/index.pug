@@ -20,7 +20,6 @@ mixin lis(text,className,ani,to)
   li.lis(class="#{className}" data-anijs="if: mouseover, do: #{ani} animated,to: #{to}")
     a(href="#" ) #{text}
 
-
 mixin Features(img,text)
   .column.features
     img(src=img data-anijs="if: scroll, on: window, do: bounce animated, before: $scrollReveal repeat")
