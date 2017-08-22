@@ -263,6 +263,8 @@ $('form').submit(function(ev) {
 
     $(".nombre").val(nombre);
     $(".email").val(email);
+    $(".ciudad").val(ciudad);
+    $(".tel").val(tel);
 
 
     if($(this).hasClass("cotizar")){
