@@ -71,6 +71,7 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
           plan: "premium"
         });
@@ -115,8 +116,10 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
-          plan: "premium"
+          plan: "premium",
+          city : ciudad
         });
          snack();//ENVIADO
          Close();
@@ -159,8 +162,10 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
-          plan: "premium"
+          plan: "premium",
+          city : ciudad
         });
          snack();//ENVIADO
          Close();
