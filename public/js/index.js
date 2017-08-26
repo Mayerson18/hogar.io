@@ -8,6 +8,7 @@ var config = {
   storageBucket: "hogar-4cb77.appspot.com",
   messagingSenderId: "178630339964"
 };
+
 firebase.initializeApp(config);
 
 function parse_query_string(query) {
