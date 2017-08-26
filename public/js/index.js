@@ -112,6 +112,7 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
           plan: "premium"
         });
@@ -156,8 +157,10 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
-          plan: "premium"
+          plan: "premium",
+          city : ciudad
         });
          snack();//ENVIADO
          Close();
@@ -200,8 +203,10 @@ function snack() {
           name: nombre,
           firstName : nombre,
           lastName : "",
+          phone : telefono,
           email: email,
-          plan: "premium"
+          plan: "premium",
+          city : ciudad
         });
          snack();//ENVIADO
          Close();
@@ -248,7 +253,7 @@ analytics.identify("potus@potus.com", {
 function Cotizar(){
   analytics.page('Cotizar', {
     title: 'Cotizar',
-    url: 'https://hogar.io',
+    url: 'https://hogar.io/cotizar',
     path: '/Cotizar'
   });
 }
@@ -256,7 +261,7 @@ function Cotizar(){
 function Descargar(){
   analytics.page('Descargar', {
     title: 'Descargar',
-    url: 'https://hogar.io',
+    url: 'https://hogar.io/descargar',
     path: '/Descargar'
   });
 }
