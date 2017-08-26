@@ -10,6 +10,47 @@ var config = {
 };
 firebase.initializeApp(config);
 
+function parse_query_string(query) {
+  var vars = query.split("&");
+  var query_string = {};
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    // If first entry with this name
+    if (typeof query_string[pair[0]] === "undefined") {
+      query_string[pair[0]] = decodeURIComponent(pair[1]);
+      // If second entry with this name
+    } else if (typeof query_string[pair[0]] === "string") {
+      var arr = [query_string[pair[0]], decodeURIComponent(pair[1])];
+      query_string[pair[0]] = arr;
+      // If third or later entry with this name
+    } else {
+      query_string[pair[0]].push(decodeURIComponent(pair[1]));
+    }
+  }
+  return query_string;
+}
+
+
+var query_string = window.location.search.substring(1);
+var parsed_qs = parse_query_string(query_string);
+var mail = (parsed_qs.email);
+
+setTimeout(function(){
+  if(typeof mail != "undefined"){
+    analytics.identify(mail, {
+     name: "por definir",
+     firstName : "por definir",
+     lastName : "por definir",
+     email: mail,
+     plan: "premium"
+   });
+  }
+  else{
+    console.log("sin parametros");
+  }
+},1000)
+
+
 /*let nombre = firebase.database().ref().child('nombre');
 let telefono = firebase.database().ref().child('telefono');
 let email = firebase.database().ref().child('email');*/
